@@ -1,0 +1,80 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+:root {
+  --canvas: 255 252 245;
+  --surface: 255 255 255;
+  --ink: 43 31 25;
+  --muted: 107 91 80;
+  --line: 234 224 210;
+  --primary: 59 42 34;
+  --on-primary: 255 249 214;
+  --sage-ink: 86 107 58;
+  --tint: 255 249 214;
+  --tint-rose: 255 220 220;
+  color-scheme: light;
+}
+.dark {
+  --canvas: 24 19 16;
+  --surface: 34 27 23;
+  --ink: 246 239 228;
+  --muted: 186 172 158;
+  --line: 62 51 44;
+  --primary: 255 249 214;
+  --on-primary: 43 31 25;
+  --sage-ink: 172 196 136;
+  --tint: 38 31 25;
+  --tint-rose: 50 35 35;
+  color-scheme: dark;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  @apply bg-canvas font-sans text-ink antialiased;
+}
+:focus-visible {
+  outline: 2px solid rgb(var(--sage-ink));
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-7xl px-5 md:px-8;
+  }
+  .btn {
+    @apply inline-flex h-12 items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 text-sm font-medium transition-[background-color,color,border-color,transform] duration-150 ease-out-strong active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply bg-primary text-on-primary hover:bg-primary/90;
+  }
+  .btn-secondary {
+    @apply border border-line bg-surface text-ink hover:border-ink/30;
+  }
+  .btn-sage {
+    @apply bg-brand-sage text-espresso hover:bg-[#9db57a];
+  }
+  .input {
+    @apply w-full rounded-xl border border-line bg-surface px-4 py-3 text-sm text-ink placeholder:text-muted/70 transition-[border-color] duration-150 focus:border-sage-ink focus:outline-none;
+  }
+  .link-arrow {
+    @apply inline-flex items-center gap-1.5 text-sm font-medium text-ink underline decoration-line underline-offset-4 transition-[text-decoration-color] duration-150 hover:decoration-ink;
+  }
+}
