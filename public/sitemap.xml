@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Halaman Utama (Homepage) -->
+  <url>
+    <loc>https://awicoffeee.netlify.app/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Halaman Menu atau Produk (Hapus atau ganti '/menu' jika namanya berbeda) -->
+  <url>
+    <loc>https://awicoffeee.netlify.app//product</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Halaman Tentang Kami (Hapus atau ganti '/about' jika tidak ada) -->
+  <url>
+    <loc>https://awicoffeee.netlify.app/impact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Halaman Kontak / Lokasi (Hapus atau ganti '/contact' jika namanya '/kontak') -->
+  <url>
+    <loc>https://awicoffeee.netlify.app/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+    <loc>https://awicoffeee.netlify.app/aboutus</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
